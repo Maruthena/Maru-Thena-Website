@@ -51,15 +51,26 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-4xl font-bold mb-6 text-[#8B4513]">Our Culinary Journey</h2>
-            <p class="text-lg mb-6">At MARU THENA, we believe that food is more than just a meal — it’s a celebration of Sri Lanka’s rich culture and heritage. We are dedicated to serving authentic Sri Lankan cuisine with a focus on tradition, flavor, and hospitality.</p>
-            <p class="text-lg mb-6">Our mission is to offer a genuine taste of Sri Lanka, using fresh, local ingredients and time-honored techniques passed down through generations. Each dish at MARU THENA tells a story — from the bustling markets of Colombo to the tranquil shores of the island’s countryside.</p>
-            <p class="text-lg mb-6">Join us on a culinary journey where every bite brings you closer to the heart of Sri Lanka, and where hospitality is as important as the food itself.</p>
-        </div>
-        <img src="rice & curry plate.jpg" class="rounded-xl shadow-2xl" alt="Sri Lankan food" />
-    </section>
+<section id="about" class="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+        <h2 class="text-5xl font-extrabold mb-6 text-[#8B4513]">Our Culinary Journey</h2>
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+            At MARU THENA, we believe that food is more than just a meal — it’s a celebration of Sri Lanka’s rich culture and heritage. 
+            We are dedicated to serving authentic Sri Lankan cuisine with a focus on tradition, flavor, and hospitality.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+            Our mission is to offer a genuine taste of Sri Lanka, using fresh, local ingredients and time-honored techniques passed down 
+            through generations. Each dish at MARU THENA tells a story — from the bustling markets of Colombo to the tranquil shores of the island’s countryside.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+            Join us on a flavor-packed journey where every bite brings you closer to the heart of Sri Lanka, and where hospitality is as important as the food itself.
+        </p>
+    </div>
+
+    <div data-aos="fade-left" class="relative">
+        <img src="rice & curry plate.jpg" class="rounded-xl shadow-2xl transform hover:scale-105 transition duration-300" alt="Sri Lankan food" />
+    </div>
+</section>
 
     <!-- Our Story Section -->
     <section id="our-story" class="bg-[#2C2C2C] py-12">
@@ -80,6 +91,52 @@
         </div>
     </section>
 
+    <!-- Location Section -->
+<section class="container mx-auto px-6 py-12 bg-[#1C1C1C] rounded-xl shadow-lg" data-aos="fade-up">
+    <div class="text-center">
+        <h3 class="text-4xl font-bold text-[#8B4513] mb-4">📍 Our Location</h3>
+        <p class="text-lg text-gray-300 font-medium">No. 164C, Galle Road, Unawatuna, Galle, Sri Lanka</p>
+    </div>
+    <p class="text-lg text-gray-300 text-center mt-8">
+        Located along Sri Lanka’s scenic southern coast, <strong>Galle</strong> is a city of history, culture, and coastal beauty. 
+        Home to the <em>iconic Galle Fort</em>, a UNESCO World Heritage Site, its charming streets and colonial-era buildings tell stories of a rich past.  
+        Just minutes away, <strong>Unawatuna Beach</strong> offers golden sands and crystal-clear waters, perfect for relaxation and adventure.  
+        Whether you're exploring landmarks, enjoying fresh seafood, or embracing the tropical vibes, <strong>Maru Thena</strong> is the perfect stop for an unforgettable dining experience.
+    </p> 
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Image 1 -->
+        <div class="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+            <img src="Unawatuna.png" class="w-full h-56 object-cover rounded-xl" alt="Unawatuna Beach" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                <p class="text-white text-lg font-semibold">🌊 Unawatuna Beach Vibes</p>
+            </div>
+        </div>   
+        <!-- Image 2 -->
+        <div class="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+            <img src="galle fort.png" class="w-full h-56 object-cover rounded-xl" alt="Galle Fort" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                <p class="text-white text-lg font-semibold">🏰 Historic Galle Fort</p>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+            <img src="3.png" class="w-full h-56 object-cover rounded-xl" alt="Galle Sunset" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                <p class="text-white text-lg font-semibold">🌅 Breathtaking Sunsets</p>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+            <img src="4.png" class="w-full h-56 object-cover rounded-xl" alt="Seafood Delights" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                <p class="text-white text-lg font-semibold">🌿 Explore Beauty</p>
+            </div>
+        </div>
+    </div>
+</section>
+
    <!-- Menu Section -->
    <section id="menu" class="bg-[#1C1C1C] py-16">
     <div class="container mx-auto px-6">
@@ -94,6 +151,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Kiribath (Milk Rice) with Lunu Miris</h4>
                         <p class="text-gray-400 text-sm mb-4">Creamy coconut-infused rice served with spicy onion sambal.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 1200/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -101,6 +159,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Rice & Curry Platter</h4>
                         <p class="text-gray-400 text-sm mb-4">Steamed rice with a selection of curries (chicken/fish/vegetable), dhal, and sambols.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 2000/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -108,6 +167,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Lamprais</h4>
                         <p class="text-gray-400 text-sm mb-4">A Dutch-Sri Lankan fusion meal: rice, curry, ash plantain, and cutlet wrapped in banana leaf.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 2500/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -115,6 +175,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Pittu with Coconut & Curry</h4>
                         <p class="text-gray-400 text-sm mb-4">Steamed rice flour and coconut mixture served with spicy curry and coconut milk.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 1700/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -122,6 +183,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">String Hoppers & Kiri Hodi</h4>
                         <p class="text-gray-400 text-sm mb-4">Delicate rice noodle nests with coconut milk gravy and lunu miris.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 1200/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -129,6 +191,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Hoppers (Appa) with Egg or Plain</h4>
                         <p class="text-gray-400 text-sm mb-4">Crispy bowl-shaped pancakes, served plain or with an egg.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 1000/-</p>
                     </div>
                 </div>
             </div>
@@ -143,6 +206,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Kottu Roti (Chicken/Beef/Veg)</h4>
                         <p class="text-gray-400 text-sm mb-4">Stir-fried chopped roti with meat, eggs, and vegetables.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 1900/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -150,6 +214,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Devilled Chicken/Prawns/Beef</h4>
                         <p class="text-gray-400 text-sm mb-4">Stir-fried in a spicy, tangy sauce with onions and capsicum.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 2000/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -157,6 +222,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Jaffna Crab Curry</h4>
                         <p class="text-gray-400 text-sm mb-4">A rich and flavorful seafood delight from the Northern region.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 2500/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -164,6 +230,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Polos Curry (Young Jackfruit Curry)</h4>
                         <p class="text-gray-400 text-sm mb-4">A must-try vegetarian dish with thick coconut gravy.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 1000/-</p>
                     </div>
                 </div>
             </div>
@@ -178,6 +245,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Gotu Kola Sambol</h4>
                         <p class="text-gray-400 text-sm mb-4">Fresh pennywort salad with coconut and lime.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 200/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -185,6 +253,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Pol Sambol</h4>
                         <p class="text-gray-400 text-sm mb-4">Spicy coconut relish.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 200/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -192,6 +261,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Seeni Sambol</h4>
                         <p class="text-gray-400 text-sm mb-4">Sweet caramelized onion relish.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 200/-</p>
                     </div>
                 </div>
             </div>
@@ -206,6 +276,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Wattalappam</h4>
                         <p class="text-gray-400 text-sm mb-4">A rich coconut-jaggery pudding with cardamom.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 350/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -213,6 +284,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Kalu Dodol</h4>
                         <p class="text-gray-400 text-sm mb-4">Sticky and sweet Sri Lankan jaggery delight.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 350/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -220,6 +292,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Coconut Pancakes (Pan Pani)</h4>
                         <p class="text-gray-400 text-sm mb-4">Soft pancakes filled with sweet coconut and treacle.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 350/-</p>
                     </div>
                 </div>
             </div>
@@ -234,6 +307,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Ceylon Tea (Plain/Milk/Spiced)</h4>
                         <p class="text-gray-400 text-sm mb-4">The finest Sri Lankan tea experience.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 400/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -241,6 +315,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Woodapple Juice</h4>
                         <p class="text-gray-400 text-sm mb-4">A unique, tangy Sri Lankan fruit drink.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 500/-</p>
                     </div>
                 </div>
                 <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
@@ -248,6 +323,7 @@
                     <div class="p-4">
                         <h4 class="text-xl font-bold mb-2 text-[#D2691E]">King Coconut Water</h4>
                         <p class="text-gray-400 text-sm mb-4">A refreshing tropical drink.</p>
+                        <p class="text-lg font-semibold text-[#FFD700]">Price: Rs. 500/-</p>
                     </div>
                 </div>
             </div>
