@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maru Thena - A Culinary Journey into Sri Lankan Heritage, serving authentic Sri Lankan cuisine.">
+    <meta name="keywords" content="Sri Lankan cuisine, authentic Sri Lankan food, Unawatuna restaurant, Maru Thena">
+    <meta name="author" content="Maru Thena">
+    <title>Maru Thena - A Culinary Journey</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.12.0/cdn.min.js" defer></script>
+    <!-- Font Awesome CDN for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body x-data="restaurantApp()" class="bg-[#121212] text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-bold text-[#D2691E]">
+                <a href="#home" class="text-white">Maru Thena (මරු තැන)</a>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="hover:text-[#8B4513] transition">Home</a>
+                <a href="#about" class="hover:text-[#8B4513] transition">About</a>
+                <a href="#menu" class="hover:text-[#8B4513] transition">Menu</a>
+                <a href="#gallery" class="hover:text-[#8B4513] transition">Gallery</a>
+                <a href="#reservation-hours" class="bg-[#8B4513] text-white px-5 py-2 rounded-full hover:bg-[#D2691E] transition">Reserve</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen parallax" style="background-image: url('path/to/your-image.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center">
+            <div class="text-white">
+                <h1 class="text-5xl font-bold mb-4">Welcome to Maru Thena</h1>
+                <p class="text-xl mb-6">A Culinary Journey into Sri Lankan Heritage</p>
+                <p class="text-lg mb-6">Where tradition meets flavor and hospitality</p>
+                <a href="#menu" class="bg-[#D2691E] text-white px-8 py-3 rounded-full text-lg hover:bg-[#8B4513] transition">Explore Menu</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-4xl font-bold mb-6 text-[#8B4513]">Our Culinary Journey</h2>
+            <p class="text-lg mb-6">At MARU THENA, we believe that food is more than just a meal — it’s a celebration of Sri Lanka’s rich culture and heritage. We are dedicated to serving authentic Sri Lankan cuisine with a focus on tradition, flavor, and hospitality.</p>
+            <p class="text-lg mb-6">Our mission is to offer a genuine taste of Sri Lanka, using fresh, local ingredients and time-honored techniques passed down through generations. Each dish at MARU THENA tells a story — from the bustling markets of Colombo to the tranquil shores of the island’s countryside.</p>
+            <p class="text-lg mb-6">Join us on a culinary journey where every bite brings you closer to the heart of Sri Lanka, and where hospitality is as important as the food itself.</p>
+        </div>
+        <img src="rice & curry plate.jpg" class="rounded-xl shadow-2xl" alt="Sri Lankan food" />
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="bg-[#2C2C2C] py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-[#D2691E]">Our Story</h2>
+            <p class="text-lg mb-6">MARU THENA was founded in 2015 by a group of passionate food lovers who were inspired by Sri Lanka’s vibrant culinary heritage. Situated in Unawatuna, Galle, our restaurant was built with one goal in mind: to offer an authentic Sri Lankan dining experience, where every dish showcases the rich traditions, bold spices, and diverse flavors that have made Sri Lankan cuisine famous worldwide.</p>
+            <p class="text-lg mb-6">The name MARU THENA (මරු තැන), meaning "the place of flavors," perfectly encapsulates our commitment to delivering mouthwatering, traditional dishes. Drawing inspiration from every region of Sri Lanka, our chefs carefully craft each meal using the freshest ingredients, blending them with time-honored cooking methods passed down through generations. From aromatic rice and curry to fresh seafood and sweet treats, we proudly present a menu that highlights the essence of Sri Lankan cooking.</p>
+        </div>
+    </section>
+
+    <!-- Chef's Background Section -->
+    <section id="chef-background" class="container mx-auto px-6 py-12">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold mb-6 text-[#8B4513]">Chef's Background</h2>
+            <p class="text-lg mb-6">Behind the flavorful dishes at MARU THENA is Chef Anil Perera, whose passion for Sri Lankan cuisine spans over 20 years. Having trained at the renowned Ceylon Institute of Culinary Arts in Colombo, Chef Anil has worked in some of Sri Lanka’s top kitchens, including a celebrated five-star hotel in Colombo, where he earned recognition for his mastery of traditional Sri Lankan cooking.</p>
+            <p class="text-lg mb-6">Chef Anil’s dedication to his craft led him to explore every corner of Sri Lanka, learning regional techniques and gaining a deeper understanding of the island’s diverse culinary offerings. His experience has shaped him into one of the foremost authorities on Sri Lankan cuisine.</p>
+            <p class="text-lg mb-6">At MARU THENA, Chef Anil combines his classical training with a commitment to using local, sustainable ingredients. With a focus on authenticity and innovation, he reimagines classic recipes, creating dishes that honor Sri Lanka’s culinary traditions while offering a modern twist. Under his expert guidance, MARU THENA brings you a dining experience that is both timeless and contemporary.</p>
+        </div>
+    </section>
+
+   <!-- Menu Section -->
+   <section id="menu" class="bg-[#1C1C1C] py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-[#D2691E]">Explore Our Menu</h2>
+
+        <!-- Signature Dishes -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-[#8B4513]">Signature Dishes</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="kiribath.jpg" alt="Kiribath with Lunu Miris" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Kiribath (Milk Rice) with Lunu Miris</h4>
+                        <p class="text-gray-400 text-sm mb-4">Creamy coconut-infused rice served with spicy onion sambal.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Rice & Curry Platter.jpg" alt="Rice & Curry Platter" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Rice & Curry Platter</h4>
+                        <p class="text-gray-400 text-sm mb-4">Steamed rice with a selection of curries (chicken/fish/vegetable), dhal, and sambols.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Lamprais.jpg" alt="Lamprais" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Lamprais</h4>
+                        <p class="text-gray-400 text-sm mb-4">A Dutch-Sri Lankan fusion meal: rice, curry, ash plantain, and cutlet wrapped in banana leaf.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Pittu with Coconut & Curry.jpg" alt="Pittu with Coconut & Curry" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Pittu with Coconut & Curry</h4>
+                        <p class="text-gray-400 text-sm mb-4">Steamed rice flour and coconut mixture served with spicy curry and coconut milk.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="String hoppers & kiri hodi.jpg" alt="String Hoppers & Kiri Hodi" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">String Hoppers & Kiri Hodi</h4>
+                        <p class="text-gray-400 text-sm mb-4">Delicate rice noodle nests with coconut milk gravy and lunu miris.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="signature dishes.jpg" alt="Hoppers (Appa) with Egg or Plain" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Hoppers (Appa) with Egg or Plain</h4>
+                        <p class="text-gray-400 text-sm mb-4">Crispy bowl-shaped pancakes, served plain or with an egg.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spicy Favorites -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-[#8B4513]">Spicy Favorites</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="kottu roti.jpg" alt="Kottu Roti" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Kottu Roti (Chicken/Beef/Veg)</h4>
+                        <p class="text-gray-400 text-sm mb-4">Stir-fried chopped roti with meat, eggs, and vegetables.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Devilled chicken.jpg" alt="Devilled Chicken/Prawns/Beef" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Devilled Chicken/Prawns/Beef</h4>
+                        <p class="text-gray-400 text-sm mb-4">Stir-fried in a spicy, tangy sauce with onions and capsicum.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Jaffna crab curry.jpg" alt="Jaffna Crab Curry" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Jaffna Crab Curry</h4>
+                        <p class="text-gray-400 text-sm mb-4">A rich and flavorful seafood delight from the Northern region.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Polos Curry.jpg" alt="Polos Curry" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Polos Curry (Young Jackfruit Curry)</h4>
+                        <p class="text-gray-400 text-sm mb-4">A must-try vegetarian dish with thick coconut gravy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sambols & Side Dishes -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-[#8B4513]">Sambols & Side Dishes</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Gotukola sambol.jpg" alt="Gotu Kola Sambol" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Gotu Kola Sambol</h4>
+                        <p class="text-gray-400 text-sm mb-4">Fresh pennywort salad with coconut and lime.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Pol sambol.jpg" alt="Pol Sambol" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Pol Sambol</h4>
+                        <p class="text-gray-400 text-sm mb-4">Spicy coconut relish.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="Seeni sambol.jpg" alt="Seeni Sambol" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Seeni Sambol</h4>
+                        <p class="text-gray-400 text-sm mb-4">Sweet caramelized onion relish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts & Sweets -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-[#8B4513]">Desserts & Sweets</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="watalappan.jpg" alt="Wattalappam" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Wattalappam</h4>
+                        <p class="text-gray-400 text-sm mb-4">A rich coconut-jaggery pudding with cardamom.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="kalu dodol.jpg" alt="Kalu Dodol" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Kalu Dodol</h4>
+                        <p class="text-gray-400 text-sm mb-4">Sticky and sweet Sri Lankan jaggery delight.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="coconut pancakes.jpg" alt="Coconut Pancakes" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Coconut Pancakes (Pan Pani)</h4>
+                        <p class="text-gray-400 text-sm mb-4">Soft pancakes filled with sweet coconut and treacle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beverages -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-[#8B4513]">Beverages</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="ceylon tea.jpg" alt="Ceylon Tea" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Ceylon Tea (Plain/Milk/Spiced)</h4>
+                        <p class="text-gray-400 text-sm mb-4">The finest Sri Lankan tea experience.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="wood apple juice.jpg" alt="Woodapple Juice" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Woodapple Juice</h4>
+                        <p class="text-gray-400 text-sm mb-4">A unique, tangy Sri Lankan fruit drink.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="king coconut water.jpg" alt="King Coconut Water" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">King Coconut Water</h4>
+                        <p class="text-gray-400 text-sm mb-4">A refreshing tropical drink.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Menu Items -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-[#8B4513]">New Menu Items</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="mango curry.jpg" alt="Spiced Mango Curry" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Spiced Mango Curry</h4>
+                        <p class="text-gray-400 text-sm mb-4">A delightful fusion of sweet and spicy flavors, made with locally sourced mangoes and aromatic Sri Lankan spices.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="crab curry.jpg" alt="Jaffna Style Crab Kottu" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Jaffna Style Crab Kottu</h4>
+                        <p class="text-gray-400 text-sm mb-4">A delicious take on the classic Kottu Roti, featuring succulent crab meat cooked with fresh roti, eggs, and a medley of spices.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="git clone https://github.com/your-username/your-repository-name.git
+                    " alt="Iced Cinnamon & Peach Tea" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Iced Cinnamon & Peach Tea</h4>
+                        <p class="text-gray-400 text-sm mb-4">A refreshing drink that blends the warmth of cinnamon with the sweetness of peach, perfect for cooling down in tropical weather.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="woodapple and mango smoothi.jpg" alt="Woodapple & Mango Smoothie" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Woodapple & Mango Smoothie</h4>
+                        <p class="text-gray-400 text-sm mb-4">A tropical fruit blend rich in vitamins and full of exotic flavors.</p>
+                    </div>
+                </div>
+                <div class="menu-item-hover bg-[#2C2C2C] rounded-xl overflow-hidden shadow-lg">
+                    <img src="coconut & jaggary cheesecake.jpg" alt="Coconut & Jaggery Cheesecake" class="w-full h-72 object-cover">
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold mb-2 text-[#D2691E]">Coconut & Jaggery Cheesecake</h4>
+                        <p class="text-gray-400 text-sm mb-4">A fusion of traditional Sri Lankan flavors and a creamy cheesecake base, offering a perfect balance of sweetness and texture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reservation & Operating Hours Section -->
+<section id="reservation-hours" class="bg-[#F4F4F4] py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Reservation Form -->
+            <div class="bg-white p-10 rounded-2xl shadow-2xl border-2 border-[#8B4513] w-full max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-6 text-[#8B4513] uppercase tracking-wide">Make a Reservation</h2>
+                <form id="reservationForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Full Name -->
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#8B4513] text-xl">👤</span>
+                            <input type="text" id="fullName" placeholder="Full Name" required 
+                                class="w-full p-4 pl-12 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B4513] text-lg font-medium text-black">
+                        </div>
+                        <!-- Email -->
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#8B4513] text-xl">📧</span>
+                            <input type="email" id="email" placeholder="Email Address" required 
+                                class="w-full p-4 pl-12 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B4513] text-lg font-medium text-black">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <!-- Date -->
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#8B4513] text-xl">📅</span>
+                            <input type="date" id="date" required 
+                                class="w-full p-4 pl-12 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B4513] text-lg font-medium text-black">
+                        </div>
+                        <!-- Time -->
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#8B4513] text-xl">⏰</span>
+                            <input type="time" id="time" required 
+                                class="w-full p-4 pl-12 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B4513] text-lg font-medium text-black">
+                        </div>
+                    </div>                                   <!-- Date & Time Section -->
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <!-- Guests -->
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#8B4513] text-xl">👥</span>
+                            <input type="number" id="guests" min="1" max="20" placeholder="Number of Guests" required 
+                                class="w-full p-4 pl-12 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B4513] text-lg font-medium text-black">
+                        </div>
+                        <!-- Special Request -->
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#8B4513] text-xl">🎉</span>
+                            <select id="specialRequest" class="w-full p-4 pl-12 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B4513] text-lg font-medium text-gray-700">
+                                <option value="" class="text-gray-500">Special Requests</option>
+                                <option value="birthday" class="text-gray-700">Birthday Celebration</option>
+                                <option value="anniversary" class="text-gray-700">Anniversary</option>
+                                <option value="private" class="text-gray-700">Private Dining</option>
+                                <option value="other" class="text-gray-700">Other</option>
+                            </select>
+                        </div>
+                    </div>                     <!-- Guests & Special Request Section -->
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full mt-6 bg-[#8B4513] text-white py-4 rounded-full hover:bg-[#D2691E] text-lg font-semibold transition transform hover:scale-105">
+                        Book Your Table
+                    </button>
+                </form>
+            </div>
+
+            <!-- Link JavaScript -->
+            <script src="script.js"></script>
+                
+
+            <!-- Operating Hours & Additional Details -->
+            <div class="bg-white p-10 rounded-2xl shadow-2xl border-2 border-[#8B4513]">
+                <h2 class="text-4xl font-bold text-center mb-6 text-[#8B4513]">Operating Hours & Additional Details</h2>
+                <h3 class="text-2xl font-semibold mb-4 text-[#8B4513]">Operating Hours</h3>
+                <p class="text-xl text-gray-700 mb-6">
+                    Monday to Sunday: 6:30 AM - 10:30 PM<br>
+                    We are open every day to serve you breakfast, lunch, and dinner.
+                </p>
+                <h3 class="text-2xl font-semibold mb-4 text-[#8B4513]">Additional Details</h3>
+                <p class="text-xl text-gray-700">
+                    <strong>Parking:</strong> Free parking is available.<br>
+                    <strong>Wi-Fi:</strong> Complimentary Wi-Fi for all customers.<br>
+                    <strong>Accessibility:</strong> Fully accessible with disability-friendly facilities.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery section -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    
+    <div class="gallery-slider">
+        <!-- Slideshow images -->
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="Logo.jpg" alt="Restaurant Logo" class="gallery-img">
+                <p class="caption">Restaurant Logo</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="interior 1.png" alt="Restaurant Interior" class="gallery-img">
+                <p class="caption">Restaurant Interior</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="interior 2.jpg" alt="Ambiance" class="gallery-img">
+                <p class="caption">Ambiance</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="events & celebrations.jpg" alt="Event Celebration" class="gallery-img">
+                <p class="caption">Events & Celebrations</p>
+            </div>
+        </div>
+        
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="ccultural touches 1.jpg" alt="Cultural Touch" class="gallery-img">
+                <p class="caption">Cultural Touches</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="ccultural touches 2.jpg" alt="Cultural Decor" class="gallery-img">
+                <p class="caption">Cultural Decor</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="Customer Experiences.png" alt="Customer Experience" class="gallery-img">
+                <p class="caption">Customer Experience</p>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="signature dishes 2.jpg" class="gallery-img">
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <div class="slide-content">
+                <img src="signature dishes.jpg" class="gallery-img">
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section id="customer-reviews" class="bg-[#F8F8F8] py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-semibold text-[#2C1B18] mb-12">Customer Reviews</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <p class="text-lg font-italic text-[#555] mb-4">“MARU THENA serves the creamiest Kiribath I’ve ever had! The rice is perfectly cooked with rich coconut milk, and the lunu miris adds the right amount of heat. A true taste of tradition that brings back childhood memories!”</p>
+                <p class="font-semibold text-[#8B4513]">- Happy Customer</p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <p class="text-lg font-italic text-[#555] mb-4">“An absolute delight! The rice and curry platter at MARU THENA is bursting with flavors—authentic dhal curry, spicy chicken curry, and fresh gotu kola sambol. The jackfruit curry (polos) was a highlight. A must-try for those who love real Sri Lankan flavors!”</p>
+                <p class="font-semibold text-[#8B4513]">- Satisfied Diner</p>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <p class="text-lg font-italic text-[#555] mb-4">“The best kottu roti in town! Freshly chopped roti mixed with succulent chicken, vegetables, and the perfect blend of spices. The sound of the kottu being prepared adds to the experience. A true street food classic done right!”</p>
+                <p class="font-semibold text-[#8B4513]">- Local Foodie</p>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <p class="text-lg font-italic text-[#555] mb-4">“MARU THENA’s devilled prawns are next level! Spicy, tangy, and packed with flavor. The prawns were fresh, and the sauce was the perfect balance of sweet and spicy. Paired wonderfully with warm roast paan (crispy bread). Highly recommended!”</p>
+                <p class="font-semibold text-[#8B4513]">- Seafood Lover</p>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <p class="text-lg font-italic text-[#555] mb-4">“MARU THENA offers not just amazing food but also top-notch service! The staff was incredibly friendly, attentive, and made sure we had everything we needed. Truly felt like home.”</p>
+                <p class="font-semibold text-[#8B4513]">- Happy Guest</p>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <p class="text-lg font-italic text-[#555] mb-4">“The staff at MARU THENA made our visit special with their warm hospitality. They even explained the dishes to us, making sure we enjoyed every bit of our meal. Highly recommended.”</p>
+                <p class="font-semibold text-[#8B4513]">- Grateful Customer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog or News Section -->
+<section id="blog-news" class="bg-[#F0F0F0] py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-semibold text-[#2C1B18] mb-12">Upcoming Events</h2>
+
+        <!-- Event Cards Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Event Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">Sri Lankan Heritage Food Night</h3>
+                <p class="text-lg font-semibold text-[#2C1B18] mb-4">📅 February 10, 2025</p>
+                <p class="text-base text-[#555] mb-4">Join us for a night of authentic Sri Lankan flavors, featuring live cooking demonstrations, traditional music, and a curated tasting menu showcasing our finest dishes.</p>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">Valentine’s Day Special Dinner</h3>
+                <p class="text-lg font-semibold text-[#2C1B18] mb-4">📅 February 14, 2025</p>
+                <p class="text-base text-[#555] mb-4">Celebrate love with a specially curated romantic dining experience. Enjoy a “4-course meal”, featuring signature dishes like Devilled Prawns, Jaffna Crab Curry, and Wattalappam dessert, paired with exclusive Ceylon tea-infused cocktails.</p>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">Tea & Food Pairing Workshop</h3>
+                <p class="text-lg font-semibold text-[#2C1B18] mb-4">📅 March 5, 2025</p>
+                <p class="text-base text-[#555] mb-4">Experience the art of pairing Sri Lankan teas with traditional dishes. This interactive session will be hosted by our expert tea sommelier and Chef Anil Perera.</p>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">Sinhala & Tamil New Year Festive Buffet</h3>
+                <p class="text-lg font-semibold text-[#2C1B18] mb-4">📅 April 13-14, 2025</p>
+                <p class="text-base text-[#555] mb-4">Celebrate the Sri Lankan New Year with an extravagant buffet featuring traditional Avurudu treats like Kavum, Kokis, and Kiribath, along with a range of classic Sri Lankan curries and sweets.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Restaurant News Section -->
+<section id="restaurant-news" class="bg-[#F9F9F9] py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-semibold text-[#2C1B18] mb-12">Restaurant News</h2>
+
+        <!-- News Cards Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- News Item 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">New Outdoor Dining Area</h3>
+                <p class="text-base text-[#555] mb-4">✨ Enjoy your meals under the stars with our newly renovated <strong>beachfront outdoor seating</strong> in Unawatuna. The perfect spot for a romantic dinner or a relaxed evening with friends.</p>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">Live Cooking Experience</h3>
+                <p class="text-base text-[#555] mb-4">🔥 We are introducing an open kitchen concept where diners can watch our chefs in action as they prepare signature dishes using traditional Sri Lankan techniques.</p>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">Sustainability Initiative</h3>
+                <p class="text-base text-[#555] mb-4">🌿 MARU THENA is now partnering with local farmers to source organic vegetables and spices, ensuring the freshest ingredients while supporting the community.</p>
+            </div>
+
+        </div>
+    <!-- Closing Statement -->
+        <p class="mt-8 text-lg text-[#555]">Stay tuned for more updates, and we look forward to welcoming you soon! 😊</p>
+    </div>
+</section>
+
+<!-- Social Media Integration Section -->
+<section id="social-media" class="bg-[#F9F9F9] py-16">
+    <div class="container mx-auto px-6 text-center">
+        <!-- Heading -->
+        <h2 class="text-4xl font-semibold text-[#2C1B18] mb-12 transition-transform transform hover:scale-105 duration-500 font-poppins">
+            Follow Us on Social Media
+        </h2>
+
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-12 mb-12">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/maruthena" target="_blank" class="text-[#F1E8D0] text-5xl font-poppins hover:text-[#8B4513] transition-colors transform hover:scale-110 duration-300 relative">
+                <i class="fab fa-instagram"></i> 
+                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#8B4513] transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                Instagram
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/maruthena" target="_blank" class="text-[#F1E8D0] text-5xl font-poppins hover:text-[#8B4513] transition-colors transform hover:scale-110 duration-300 relative">
+                <i class="fab fa-facebook"></i> 
+                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#8B4513] transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"></span>
+                Facebook
+            </a>
+        </div>
+
+        <!-- Optional: Display Live Social Media Feed (Example with Instagram) -->
+        <div id="instagram-feed" class="mt-12 max-w-4xl mx-auto p-8 bg-[#F1E8D0] text-[#2C1B18] rounded-lg shadow-xl transition-all transform hover:scale-105 duration-500">
+            <p class="text-lg mb-4">
+                Stay connected with us for the latest updates and behind-the-scenes content!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-[#150603] text-white py-16">
+    <div class="container mx-auto px-6 max-w-screen-lg grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Location & Contact -->
+        <div class="space-y-6">
+            <h3 class="text-2xl font-semibold text-[#F1E8D0] font-poppins">Location & Contact</h3>
+            <p class="text-lg mb-2 text-[#F1E8D0]">No. 164C, Galle Road, Unawatuna, Galle, Sri Lanka</p>
+            <p class="text-lg mb-2 text-[#F1E8D0]">Phone: <span class="font-semibold">+94 77 123 4567</span></p>
+            <p class="text-lg mb-2 text-[#F1E8D0]">Email: <a href="mailto:maruthena@gmail.com" class="hover:underline">maruthena@gmail.com</a></p>
+            <p class="text-lg text-[#F1E8D0]">Website: <a href="https://www.maruthena.com" class="hover:underline">www.maruthena.com</a></p>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="space-y-6">
+            <h3 class="text-2xl font-semibold text-[#F1E8D0] font-poppins">Stay Updated</h3>
+            <p class="text-lg text-[#F1E8D0]">Sign up for our newsletter to get the latest updates and offers.</p>
+            <form id="newsletterForm" action="#" method="POST" class="flex flex-col space-y-4">
+                <input type="email" id="newsletterEmail" placeholder="Your email" class="p-4 rounded-lg text-black focus:ring-2 focus:ring-[#8B4513] text-lg" required>
+                <button type="submit" class="bg-[#8B4513] text-white py-3 px-6 rounded-lg hover:bg-[#6E3D2D] transition-colors text-lg">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="mt-12 text-center text-sm text-[#F1E8D0] font-poppins">
+        <p>&copy; 2025 Maru Thena. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Include Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script src="gallery.js"></script>
+<script src="script2.js"></script>
+</body>
+
+</html>

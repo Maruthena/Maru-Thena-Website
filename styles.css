@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #2C1B18; /* Dark Brown */
+    --secondary-color: #000000; /* Black */
+    --accent-color: #FFFFFF; /* White */
+    --background-color: #150603; /* Darker brown background */
+    --highlight-color: #F1E8D0; /* Light cream highlight */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--highlight-color);
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 4rem 2rem;
+    color: var(--highlight-color);
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: var(--highlight-color);
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+/* Button Styles */
+.bg-btn {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.bg-btn:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+/* Menu Item Hover Effect */
+.menu-item-hover {
+    transition: all 0.3s ease;
+}
+
+.menu-item-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p, ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--highlight-color);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li strong {
+    color: var(--accent-color);
+}
+
+section {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu-category {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-category h3 {
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+}
+
+.menu-category ul li {
+    margin-bottom: 0.75rem;
+}
+
+.menu-categories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .menu-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item-hover img {
+    transition: transform 0.3s ease;
+}
+
+.menu-item-hover:hover img {
+    transform: scale(1.05);
+}
+
+.menu-items {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.menu-item {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item h4 {
+    font-size: 1.25rem;
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: var(--accent-color);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Reservation Section */
+#reserve {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center Content */
+#reserve .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+/* Section Heading */
+#reserve h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* Underline Effect */
+#reserve h2::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary-color);
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+/* Form Container */
+#reserve .form-container {
+    max-width: 550px;
+    background: var(--accent-color);
+    padding: 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Form */
+#reserve .form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs & Select Fields */
+#reserve input, #reserve select, #reserve button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;  /* Set text color to black */
+    transition: all 0.3s ease;
+}
+
+#reserve input:focus, #reserve select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(var(--primary-color-rgb), 0.5);
+}
+
+
+/* Submit Button */
+#reserve button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover */
+#reserve button:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Grid */
+#reserve .grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    #reserve .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    #reserve .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Changed to white for better contrast */
+    width: 100%;
+    max-width: 900px;  /* Reduced max width */
+    height: 600px; /* Adjusted height */
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    background:  #535353d4 100%
+}
+/* Gallery Section Title */
+#gallery h2 {
+    color: #000000; /* Black color */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Gallery Slider */
+.gallery-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Slide content (Image and Caption) */
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Style for images */
+.gallery-img {
+    width: 100%;
+    max-width: 500px;  /* Reduced size */
+    height: auto;
+    border-radius: 8px; /* Reduced border radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption Style */
+.caption {
+    font-size: 1rem;  /* Smaller text size */
+    font-weight: bold;
+    color: #fff;
+    margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 10px; /* Reduced space from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Show caption when hover */
+.slide-content:hover .caption {
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 15px 20px;  /* Increased padding for larger buttons */
+    color: #fff;
+    font-size: 24px;  /* Larger font size for modern feel */
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;  /* Rounded buttons */
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Light shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prev {
+    left: 15px;  /* Increased left padding */
+}
+
+.next {
+    right: 15px;  /* Increased right padding */
+}
+
+/* Hover Effect */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.85);  /* Darker background on hover */
+    transform: translateY(-50%) scale(1.1);  /* Slightly larger on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);  /* Stronger shadow on hover */
+}
+
+/* Active state (when clicked) */
+.prev:active, .next:active {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(0.95);  /* Button shrinks when clicked */
+}
+
+
+/* Fade Animation for Slide Transition */
+.fade {
+    animation-name: fade;
+    animation-duration: 10s; /* Adjust transition speed */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; /* Ensures it repeats indefinitely */
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #gallery {
+        height: auto;
+        padding: 15px; /* Reduced padding */
+    }
+    
+    .gallery-img {
+        max-width: 100%;
+    }
+    
+    .caption {
+        font-size: 0.9rem; /* Smaller caption text */
+        padding: 6px 12px; /* Reduced padding */
+    }
+
+    .prev, .next {
+        font-size: 18px; /* Smaller buttons */
+        padding: 8px;
+    }
+}
+
+/* Event Card Hover Effect */
+.bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Text */
+h3 {
+    font-size: 1.25rem;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+a {
+    color: #8B4513;
+}
+
+a:hover {
+    color: #6E3D2D;
+}
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+    .grid-cols-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-cols-1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* News Card Hover Effect */
+.bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* News Text */
+h3 {
+    font-size: 1.25rem;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+a {
+    color: #8B4513;
+}
+
+a:hover {
+    color: #6E3D2D;
+}
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+    .grid-cols-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-cols-1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Social Media Icons */
+#social-media .fab {
+    transition: transform 0.3s ease;
+}
+
+#social-media .fab:hover {
+    transform: scale(1.1);
+}
+
+/* Instagram Feed Section */
+#instagram-feed {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Mobile-Friendly Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Adjust Sections */
+    #gallery, #restaurant-news, #social-media {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Adjust News Cards Layout */
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Social Media Icons */
+    #social-media .fab {
+        font-size: 3rem;
+    }
+    
+    /* Form Inputs */
+    input, button {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
